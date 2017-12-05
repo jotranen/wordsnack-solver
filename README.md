@@ -1,5 +1,8 @@
 # wordsnack-solver
-word snack game solver
+Word snack game solver.
+
+Sanapala avustin.
+
 
 Finnish words: http://kaino.kotus.fi/sanat/nykysuomi/kotus-sanalista-v1.zip with https://creativecommons.org/licenses/by/3.0/deed.fi license.
 ```

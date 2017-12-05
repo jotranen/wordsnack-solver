@@ -43,7 +43,7 @@ func subPerms(str []string) {
 }
 
 func main() {
-	file, err := os.Open("sanat.txt")
+	file, err := os.Open("words/finnish.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

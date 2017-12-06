@@ -1,3 +1,6 @@
+// Jari Otranen, 2017
+//
+// Simple tool to find all possible string permutations and map then against dictionary
 package main
 
 import (
@@ -16,6 +19,7 @@ func init() {
 	words = make(map[string]bool)
 }
 
+// permutes all string combinations
 func perm(str []string, i int) {
 	if i == len(str) {
 		m[strings.Join(str, "")] = true
@@ -28,6 +32,7 @@ func perm(str []string, i int) {
 	}
 }
 
+// all substrings with length >= 2
 func subPerms(str []string) {
 
 	if len(str) == 1 { return }
@@ -36,7 +41,6 @@ func subPerms(str []string) {
 		tmp := make([]string, len(str))
 		copy(tmp, str)
 		tmp = append(tmp[:i], tmp[i+1:]...)
-		//fmt.Printf("%d - %s - len: %d\n", i, tmp, len(tmp))
 		perm(tmp, 0)
 		if len(tmp) > 2 { subPerms(tmp) }
 	}

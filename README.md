@@ -13,6 +13,6 @@ cat kotus-sanalista_v1/kotus-sanalista_v1.xml | awk -F"<st><s>" '{print $2}' | a
 
 ### Usage
 ```
-go install; wordsnack-solver kala
+go install; wordsnack-solver words/finnish.txt kala
 ```
 

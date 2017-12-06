@@ -43,7 +43,12 @@ func subPerms(str []string) {
 }
 
 func main() {
-	file, err := os.Open("words/finnish.txt")
+	if len(os.Args) != 3 {
+		fmt.Printf("Usage  : wordsnack-solver <language-file> kala\n")
+		fmt.Printf("Example: wordsnack-solver words/finnish.txt kala\n")
+		return
+	}
+	file, err := os.Open(os.Args[1])
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -54,7 +59,7 @@ func main() {
 		words[scanner.Text()] = true
 	}
 
-	input := strings.ToLower(os.Args[1])
+	input := strings.ToLower(os.Args[2])
 
 	perm(strings.Split(input, ""), 0)
 	subPerms(strings.Split(input, ""))
